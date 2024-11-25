@@ -28,7 +28,7 @@ public class DetectLoopInLinkedList {
         return fast;
     }
 
-    static class ListNode {
+    private static class ListNode {
         int data;
         ListNode next;
 

@@ -25,7 +25,7 @@ public class FindXthNodeFromEndOfLinkedList {
         return curr;
     }
 
-    static class ListNode {
+    private static class ListNode {
         int data;
         ListNode next;
 

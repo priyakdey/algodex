@@ -55,7 +55,7 @@ public class ImplementQueueUsingLinkedList {
         size--;
     }
 
-    static class ListNode {
+    private static class ListNode {
         int data;
         ListNode next;
 

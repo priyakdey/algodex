@@ -50,7 +50,7 @@ public class AddTwoNumbersAsLists {
         return dummy.next;
     }
 
-    static class ListNode {
+    private static class ListNode {
         int data;
         ListNode next;
 

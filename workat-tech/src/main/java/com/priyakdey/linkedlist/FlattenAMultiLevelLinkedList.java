@@ -33,7 +33,7 @@ public class FlattenAMultiLevelLinkedList {
         return head.next;
     }
 
-    static class ListNode {
+    private static class ListNode {
         int data;
         ListNode next;
         ListNode down;

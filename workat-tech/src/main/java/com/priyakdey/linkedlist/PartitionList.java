@@ -46,7 +46,7 @@ public class PartitionList {
         return head1.next;
     }
 
-    static class ListNode {
+    private static class ListNode {
         int data;
         ListNode next;
 

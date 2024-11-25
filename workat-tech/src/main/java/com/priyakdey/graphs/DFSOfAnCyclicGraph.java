@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * @author Priyak Dey
  */
-public class DFSOfAnAcyclicGraph {
+public class DFSOfAnCyclicGraph {
 
     ArrayList<Integer> dfs(ArrayList<Integer>[] adjList) {
         ArrayList<Integer> preorder = new ArrayList<>(adjList.length);

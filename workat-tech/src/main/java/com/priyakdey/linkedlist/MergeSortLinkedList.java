@@ -51,7 +51,7 @@ public class MergeSortLinkedList {
         return mid;
     }
 
-    static class ListNode {
+    private static class ListNode {
         int data;
         ListNode next;
 

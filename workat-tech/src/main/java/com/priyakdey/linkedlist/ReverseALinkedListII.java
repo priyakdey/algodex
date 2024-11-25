@@ -52,7 +52,7 @@ public class ReverseALinkedListII {
         return new ListNode[]{prev, head};
     }
 
-    static class ListNode {
+    private static class ListNode {
         int data;
         ListNode next;
 

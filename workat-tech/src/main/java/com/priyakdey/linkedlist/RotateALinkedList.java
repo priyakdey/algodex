@@ -43,7 +43,7 @@ public class RotateALinkedList {
         return length;
     }
 
-    static class ListNode {
+    private static class ListNode {
         int data;
         ListNode next;
 

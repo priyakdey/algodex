@@ -32,7 +32,7 @@ public class DeleteXthNodeFromEndOfLinkedList {
         return head;
     }
 
-    static class ListNode {
+    private static class ListNode {
         int data;
         ListNode next;
 
