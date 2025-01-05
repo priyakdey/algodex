@@ -12,7 +12,7 @@ The repository is organized into the following folders:
   - Solutions to problems from [LeetCode](https://leetcode.com/).
 - **NeetCode/**
   - Solutions based on the [NeetCode](https://neetcode.io/) roadmap.
-- **AlgoExpert/**
+- **[AlgoExpert/](./algoexpert)**
   - Solutions for problems from [AlgoExpert](https://www.algoexpert.io/).
 - **Notes/**
   - Conceptual notes on algorithms, data structures, and problem-solving techniques.
