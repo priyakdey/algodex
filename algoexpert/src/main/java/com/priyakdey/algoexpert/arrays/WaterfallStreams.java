@@ -16,10 +16,10 @@ public class WaterfallStreams {
         queue.offer(new Tuple(0, source, 100.0));
 
         while (!queue.isEmpty()) {
-            Tuple current = queue.poll();
-            int row = current.row;
-            int col = current.col;
-            double volume = current.volume;
+            Tuple tuple = queue.poll();
+            int row = tuple.row;
+            int col = tuple.col;
+            double volume = tuple.volume;
 
             if (row == rows - 1) {
                 buckets[col] += volume;
@@ -27,32 +27,24 @@ public class WaterfallStreams {
             }
 
             if (array[row + 1][col] == 0) {
-                Tuple leftTuple = new Tuple(row + 1, col, volume);
-                queue.offer(leftTuple);
-                System.out.printf("From %s to %s\n", current, leftTuple);
+                queue.offer(new Tuple(row + 1, col, volume));
             } else {
                 int left = col - 1;
-                while (left >= 0 && array[row][left] != 0) {
+                while (left >= 0 && array[row + 1][left] != 0 && array[row][left] == 0) {
                     left--;
                 }
-                if (left >= 0 && array[row][left] == 0) {
-                    Tuple leftTuple = new Tuple(row + 1, left, volume / 2);
-                    queue.offer(leftTuple);
-                    System.out.printf("From %s to %s\n", current, leftTuple);
+                if (left >= 0 && array[row + 1][left] == 0) {
+                    queue.offer(new Tuple(row + 1, left, volume / 2));
                 }
 
                 int right = col + 1;
-                while (right < cols && array[row][right] != 0) {
+                while (right < rows && array[row + 1][right] != 0 && array[row][right] == 0) {
                     right++;
                 }
-                if (right < cols && array[row][right] == 0) {
-                    Tuple rightTuple = new Tuple(row + 1, right, volume / 2);
-                    queue.offer(rightTuple);
-                    System.out.printf("From %s to %s\n", current, rightTuple);
+                if (right < rows && array[row + 1][right] == 0) {
+                    queue.offer(new Tuple(row + 1, right, volume / 2));
                 }
             }
-
-
         }
 
         return buckets;
