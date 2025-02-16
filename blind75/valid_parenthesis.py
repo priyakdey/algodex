@@ -1,11 +1,11 @@
 from collections import deque
-from typing import Dict
+from typing import Deque, Dict
 
 
 class Solution:
     def isValid(self, s: str) -> bool:
         mappings: Dict[str, str] = {")": "(", "}": "{", "]": "["}
-        stack = deque()
+        stack: Deque[str] = deque()
 
         for ch in s:
             if ch in mappings:
@@ -14,4 +14,6 @@ class Solution:
             else:
                 stack.append(ch)
 
+
         return len(stack) == 0
+
