@@ -15,4 +15,3 @@ class Solution:
                 left = mid + 1
 
         return letters[index] if index != -1 else letters[0]
-

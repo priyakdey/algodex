@@ -17,14 +17,15 @@ class Solution:
                 else:
                     left = mid + 1
 
-            return sorted_intervals[index][2] if index != -1 else -1 
+            return sorted_intervals[index][2] if index != -1 else -1
 
-        sorted_intervals = [[start, end, index] for index, [start, end] in enumerate(intervals)]
+        sorted_intervals = [
+            [start, end, index] for index, [start, end] in enumerate(intervals)
+        ]
         sorted_intervals.sort(key=lambda x: (x[0], x[1]))
-        result: List[int] = [-1] *len(intervals)
-        
+        result: List[int] = [-1] * len(intervals)
+
         for i, interval in enumerate(intervals):
             result[i] = index_of(interval)
-            
-        return result
 
+        return result

@@ -10,7 +10,7 @@ class Solution:
             left, right = 0, len(nums) - 1
             while left <= right:
                 mid = left + (right - left) // 2
-                if nums[mid] >= num: 
+                if nums[mid] >= num:
                     index = mid
                     right = mid - 1
                 else:
@@ -27,4 +27,3 @@ class Solution:
             return [left_index, len(nums) - 1]
 
         return [left_index, right_index - 1]
-

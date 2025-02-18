@@ -16,9 +16,8 @@ class Solution:
             if result == 0:
                 return pick
             elif result == 1:
-                left = pick + 1 
+                left = pick + 1
             else:
-                right = pick - 1 
+                right = pick - 1
 
         raise Exception("invalid input")
-
